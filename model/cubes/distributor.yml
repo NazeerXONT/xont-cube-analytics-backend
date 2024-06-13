@@ -1,0 +1,289 @@
+cubes:
+  - name: distributor
+    sql_table: "\"RD\".\"Distributor\""
+    data_source: default
+
+    joins: []
+
+    dimensions:
+      - name: RecordID
+        sql: "{CUBE}.\"RecordID\""
+        type: number
+        primary_key: true
+
+      - name: businessunit
+        sql: "{CUBE}.\"BusinessUnit\""
+        type: string
+
+      - name: distributorcode
+        sql: "{CUBE}.\"DistributorCode\""
+        type: string
+
+      - name: distributorname
+        sql: "{CUBE}.\"DistributorName\""
+        type: string
+
+      - name: addressline1
+        sql: "{CUBE}.\"AddressLine1\""
+        type: string
+
+      - name: addressline2
+        sql: "{CUBE}.\"AddressLine2\""
+        type: string
+
+      - name: addressline3
+        sql: "{CUBE}.\"AddressLine3\""
+        type: string
+
+      - name: addressline4
+        sql: "{CUBE}.\"AddressLine4\""
+        type: string
+
+      - name: addressline5
+        sql: "{CUBE}.\"AddressLine5\""
+        type: string
+
+      - name: postcode
+        sql: "{CUBE}.\"PostCode\""
+        type: string
+
+      - name: postcodesys
+        sql: "{CUBE}.\"PostCodeSys\""
+        type: string
+
+      - name: alphasearchcode
+        sql: "{CUBE}.\"AlphaSearchCode\""
+        type: string
+
+      - name: shortaddress
+        sql: "{CUBE}.\"ShortAddress\""
+        type: string
+
+      - name: telephonenumber
+        sql: "{CUBE}.\"TelephoneNumber\""
+        type: string
+
+      - name: telephonenumbersys
+        sql: "{CUBE}.\"TelephoneNumberSys\""
+        type: string
+
+      - name: faxnumber
+        sql: "{CUBE}.\"FaxNumber\""
+        type: string
+
+      - name: emailaddress
+        sql: "{CUBE}.\"EMailAddress\""
+        type: string
+
+      - name: webaddress
+        sql: "{CUBE}.\"WebAddress\""
+        type: string
+
+      - name: salutation
+        sql: "{CUBE}.\"Salutation\""
+        type: string
+
+      - name: title
+        sql: "{CUBE}.\"Title\""
+        type: string
+
+      - name: contactname
+        sql: "{CUBE}.\"ContactName\""
+        type: string
+
+      - name: onstopflag
+        sql: "{CUBE}.\"OnStopFlag\""
+        type: string
+
+      - name: onstopreasoncode
+        sql: "{CUBE}.\"OnStopReasonCode\""
+        type: string
+
+      - name: vatstatus
+        sql: "{CUBE}.\"VATStatus\""
+        type: string
+
+      - name: vatcode
+        sql: "{CUBE}.\"VATCode\""
+        type: string
+
+      - name: vatregistrationno
+        sql: "{CUBE}.\"VATRegistrationNo\""
+        type: string
+
+      - name: pricingmethod
+        sql: "{CUBE}.\"PricingMethod\""
+        type: string
+
+      - name: pricegroup
+        sql: "{CUBE}.\"PriceGroup\""
+        type: string
+
+      - name: tradeschemegroup
+        sql: "{CUBE}.\"TradeSchemeGroup\""
+        type: string
+
+      - name: commacctcode
+        sql: "{CUBE}.\"CommAcctCode\""
+        type: string
+
+      - name: commacctsubcode
+        sql: "{CUBE}.\"CommAcctSubCode\""
+        type: string
+
+      - name: salesexecutivecode
+        sql: "{CUBE}.\"SalesExecutiveCode\""
+        type: string
+
+      - name: suppliercode
+        sql: "{CUBE}.\"SupplierCode\""
+        type: string
+
+      - name: sourcewarehousecode
+        sql: "{CUBE}.\"SourceWarehouseCode\""
+        type: string
+
+      - name: sourcelocationcode
+        sql: "{CUBE}.\"SourceLocationCode\""
+        type: string
+
+      - name: destinationwarehousecode
+        sql: "{CUBE}.\"DestinationWarehouseCode\""
+        type: string
+
+      - name: destinationlocationcode
+        sql: "{CUBE}.\"DestinationLocationCode\""
+        type: string
+
+      - name: territorycode
+        sql: "{CUBE}.\"TerritoryCode\""
+        type: string
+
+      - name: status
+        sql: "{CUBE}.\"Status\""
+        type: string
+
+      - name: createdby
+        sql: "{CUBE}.\"CreatedBy\""
+        type: string
+
+      - name: updatedby
+        sql: "{CUBE}.\"UpdatedBy\""
+        type: string
+
+      - name: countrycode
+        sql: "{CUBE}.\"CountryCode\""
+        type: string
+
+      - name: transportmodecode
+        sql: "{CUBE}.\"TransportModeCode\""
+        type: string
+
+      - name: termsofdelivercode
+        sql: "{CUBE}.\"TermsOfDeliverCode\""
+        type: string
+
+      - name: invoicedeclaration
+        sql: "{CUBE}.\"InvoiceDeclaration\""
+        type: string
+
+      - name: consinvoicecode
+        sql: "{CUBE}.\"ConsInvoiceCode\""
+        type: string
+
+      - name: invoiceaccountcode
+        sql: "{CUBE}.\"InvoiceAccountCode\""
+        type: string
+
+      - name: currencyprocessingrequired
+        sql: "{CUBE}.\"CurrencyProcessingRequired\""
+        type: string
+
+      - name: currencycode
+        sql: "{CUBE}.\"CurrencyCode\""
+        type: string
+
+      - name: settlementtermscode
+        sql: "{CUBE}.\"SettlementTermsCode\""
+        type: string
+
+      - name: paymentmethodcode
+        sql: "{CUBE}.\"PaymentMethodCode\""
+        type: string
+
+      - name: cashsalesflag
+        sql: "{CUBE}.\"CashSalesFlag\""
+        type: string
+
+      - name: discountflag
+        sql: "{CUBE}.\"DiscountFlag\""
+        type: string
+
+      - name: partialdespatchallowed
+        sql: "{CUBE}.\"PartialDespatchAllowed\""
+        type: string
+
+      - name: backordersallowed
+        sql: "{CUBE}.\"BackOrdersAllowed\""
+        type: string
+
+      - name: proformaflag
+        sql: "{CUBE}.\"ProformaFlag\""
+        type: string
+
+      - name: nbtstatus
+        sql: "{CUBE}.\"NBTStatus\""
+        type: string
+
+      - name: nbtcode
+        sql: "{CUBE}.\"NBTCode\""
+        type: string
+
+      - name: bttstatus
+        sql: "{CUBE}.\"BTTStatus\""
+        type: string
+
+      - name: bttcode
+        sql: "{CUBE}.\"BTTCode\""
+        type: string
+
+      - name: erpdistributorcode
+        sql: "{CUBE}.\"ERPDistributorCode\""
+        type: string
+
+      - name: nbtregistrationno
+        sql: "{CUBE}.\"NBTRegistrationNo\""
+        type: string
+
+      - name: consignmentagent
+        sql: "{CUBE}.\"ConsignmentAgent\""
+        type: string
+
+      - name: ncdistributorcode
+        sql: "{CUBE}.\"NCDistributorCode\""
+        type: string
+
+      - name: createdon
+        sql: "{CUBE}.\"CreatedOn\""
+        type: time
+
+      - name: updatedon
+        sql: "{CUBE}.\"UpdatedOn\""
+        type: time
+
+      - name: marketshareasat
+        sql: "{CUBE}.\"MarketShareAsAt\""
+        type: time
+
+      - name: timestamp
+        sql: "{CUBE}.\"TimeStamp\""
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

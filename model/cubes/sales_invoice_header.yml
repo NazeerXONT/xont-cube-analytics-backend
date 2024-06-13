@@ -1,0 +1,488 @@
+cubes:
+  - name: sales_invoice_header
+    sql_table: "\"RD\".\"SalesInvoiceHeader\""
+    data_source: default
+
+    joins: 
+      - name: retailer
+        relationship: many_to_one
+        sql: "{sales_invoice_header}.RetailerCode = {retailer}.RetailerCode"
+
+      - name: distributor
+        relationship: many_to_one
+        sql: "{sales_invoice_header}.DistributorCode = {distributor}.DistributorCode"
+
+      - name: territory_control
+        relationship: many_to_one
+        sql: "{sales_invoice_header}.TerritoryCode = {territory_control}.TerritoryCode"
+
+    dimensions:
+      - name: RecID
+        sql: "{CUBE}.\"RecID\""
+        type: number
+        primary_key: true
+
+      - name: businessunit
+        sql: "{CUBE}.\"BusinessUnit\""
+        type: string
+
+      - name: territorycode
+        sql: "{CUBE}.\"TerritoryCode\""
+        type: string
+
+      - name: executivecode
+        sql: "{CUBE}.\"ExecutiveCode\""
+        type: string
+
+      - name: salescategorycode
+        sql: "{CUBE}.\"SalesCategoryCode\""
+        type: string
+
+      - name: retailercode
+        sql: "{CUBE}.\"RetailerCode\""
+        type: string
+
+      - name: distributorcode
+        sql: "{CUBE}.\"DistributorCode\""
+        type: string
+
+      - name: invoiceno
+        sql: "{CUBE}.\"InvoiceNo\""
+        type: number
+
+      - name: customerorderreference
+        sql: "{CUBE}.\"CustomerOrderReference\""
+        type: string
+
+      - name: cancelledreasoncode
+        sql: "{CUBE}.\"CancelledReasonCode\""
+        type: string
+
+      - name: warehousecode
+        sql: "{CUBE}.\"WarehouseCode\""
+        type: string
+
+      - name: locationcode
+        sql: "{CUBE}.\"LocationCode\""
+        type: string
+
+      - name: commissionacctcode
+        sql: "{CUBE}.\"CommissionAcctCode\""
+        type: string
+
+      - name: currencycode
+        sql: "{CUBE}.\"CurrencyCode\""
+        type: string
+
+      - name: invoiceaccountcode
+        sql: "{CUBE}.\"InvoiceAccountCode\""
+        type: string
+
+      - name: invoicesource
+        sql: "{CUBE}.\"InvoiceSource\""
+        type: string
+
+      - name: status
+        sql: "{CUBE}.\"Status\""
+        type: string
+
+      - name: routecode
+        sql: "{CUBE}.\"RouteCode\""
+        type: string
+
+      - name: settlementcode
+        sql: "{CUBE}.\"SettlementCode\""
+        type: string
+
+      - name: paymentmethodcode
+        sql: "{CUBE}.\"PaymentMethodCode\""
+        type: string
+
+      - name: transportreference
+        sql: "{CUBE}.\"TransportReference\""
+        type: string
+
+      - name: createdby
+        sql: "{CUBE}.\"CreatedBy\""
+        type: string
+
+      - name: updatedby
+        sql: "{CUBE}.\"UpdatedBy\""
+        type: string
+
+      - name: extrachargesdesc1
+        sql: "{CUBE}.\"ExtraChargesDesc1\""
+        type: string
+
+      - name: extrachargesdesc2
+        sql: "{CUBE}.\"ExtraChargesDesc2\""
+        type: string
+
+      - name: userdefinedfield1
+        sql: "{CUBE}.\"UserDefinedField1\""
+        type: string
+
+      - name: userdefinedfield2
+        sql: "{CUBE}.\"UserDefinedField2\""
+        type: string
+
+      - name: userdefinedfield3
+        sql: "{CUBE}.\"UserDefinedField3\""
+        type: string
+
+      - name: uplaodedby
+        sql: "{CUBE}.\"UplaodedBy\""
+        type: string
+
+      - name: valuelimitexceeded
+        sql: "{CUBE}.\"ValueLimitExceeded\""
+        type: string
+
+      - name: userprofile
+        sql: "{CUBE}.\"UserProfile\""
+        type: string
+
+      - name: temporycreditapprovedby
+        sql: "{CUBE}.\"TemporyCreditApprovedBy\""
+        type: string
+
+      - name: temporycredittype
+        sql: "{CUBE}.\"TemporyCreditType\""
+        type: string
+
+      - name: stockterritory
+        sql: "{CUBE}.\"StockTerritory\""
+        type: string
+
+      - name: priceoverwriteuser
+        sql: "{CUBE}.\"PriceOverWriteUser\""
+        type: string
+
+      - name: discountoverwriteuser
+        sql: "{CUBE}.\"DiscountOverWriteUser\""
+        type: string
+
+      - name: pdasalescategorycode
+        sql: "{CUBE}.\"PDASalesCategoryCode\""
+        type: string
+
+      - name: loginexecutive
+        sql: "{CUBE}.\"LoginExecutive\""
+        type: string
+
+      - name: remarks
+        sql: "{CUBE}.\"Remarks\""
+        type: string
+
+      - name: gracecancelperiodexceeded
+        sql: "{CUBE}.\"GraceCancelPeriodExceeded\""
+        type: string
+
+      - name: deliverycoordinator
+        sql: "{CUBE}.\"DeliveryCoordinator\""
+        type: string
+
+      - name: deliverycoordinatoruserprofile
+        sql: "{CUBE}.\"DeliveryCoordinatorUserProfile\""
+        type: string
+
+      - name: deliverystatus
+        sql: "{CUBE}.\"DeliveryStatus\""
+        type: string
+
+      - name: taxinvoice
+        sql: "{CUBE}.\"TaxInvoice\""
+        type: string
+
+      - name: deliverycompleted
+        sql: "{CUBE}.\"DeliveryCompleted\""
+        type: string
+
+      - name: saletype
+        sql: "{CUBE}.\"SaleType\""
+        type: string
+
+      - name: erpcustomerorderref
+        sql: "{CUBE}.\"ERPCustomerOrderRef\""
+        type: string
+
+      - name: transferedtodistributor
+        sql: "{CUBE}.\"TransferedToDistributor\""
+        type: string
+
+      - name: scancopyavailable
+        sql: "{CUBE}.\"ScanCopyAvailable\""
+        type: string
+
+      - name: scancopy
+        sql: "{CUBE}.\"ScanCopy\""
+        type: string
+
+      - name: originalexecutivecode
+        sql: "{CUBE}.\"OriginalExecutiveCode\""
+        type: string
+
+      - name: deliveryaddresscode
+        sql: "{CUBE}.\"DeliveryAddressCode\""
+        type: string
+
+      - name: taxcalculationmethod
+        sql: "{CUBE}.\"TAXCalculationMethod\""
+        type: string
+
+      - name: pobinvoice
+        sql: "{CUBE}.\"POBInvoice\""
+        type: string
+
+      - name: pobrep
+        sql: "{CUBE}.\"POBRep\""
+        type: string
+
+      - name: medicalrep
+        sql: "{CUBE}.\"MedicalRep\""
+        type: string
+
+      - name: actualexecutive
+        sql: "{CUBE}.\"ActualExecutive\""
+        type: string
+
+      - name: delivarytown
+        sql: "{CUBE}.\"DelivaryTown\""
+        type: string
+
+      - name: vatstatus
+        sql: "{CUBE}.\"VATStatus\""
+        type: string
+
+      - name: vatregistrationno
+        sql: "{CUBE}.\"VATRegistrationNo\""
+        type: string
+
+      - name: distributorvatregno
+        sql: "{CUBE}.\"DistributorVATRegNo\""
+        type: string
+
+      - name: invoiceformat
+        sql: "{CUBE}.\"InvoiceFormat\""
+        type: string
+
+      - name: nbtregno
+        sql: "{CUBE}.\"NBTRegNo\""
+        type: string
+
+      - name: modeofdelivery
+        sql: "{CUBE}.\"ModeOfDelivery\""
+        type: string
+
+      - name: sealedstatus
+        sql: "{CUBE}.\"SealedStatus\""
+        type: string
+
+      - name: actualterritorycode
+        sql: "{CUBE}.\"ActualTerritoryCode\""
+        type: string
+
+      - name: actualexecutivecode
+        sql: "{CUBE}.\"ActualExecutiveCode\""
+        type: string
+
+      - name: actualsalescategorycode
+        sql: "{CUBE}.\"ActualSalesCategoryCode\""
+        type: string
+
+      - name: actualretailercode
+        sql: "{CUBE}.\"ActualRetailerCode\""
+        type: string
+
+      - name: actualdistributorcode
+        sql: "{CUBE}.\"ActualDistributorCode\""
+        type: string
+
+      - name: actualroutecode
+        sql: "{CUBE}.\"ActualRouteCode\""
+        type: string
+
+      - name: cumulativeprocess
+        sql: "{CUBE}.\"CumulativeProcess\""
+        type: string
+
+      - name: deliveryloaded
+        sql: "{CUBE}.\"DeliveryLoaded\""
+        type: string
+
+      - name: differentlocation
+        sql: "{CUBE}.\"DifferentLocation\""
+        type: string
+
+      - name: ponumber
+        sql: "{CUBE}.\"PONumber\""
+        type: string
+
+      - name: approve
+        sql: "{CUBE}.\"Approve\""
+        type: string
+
+      - name: createdon
+        sql: "{CUBE}.\"CreatedOn\""
+        type: time
+
+      - name: deliverysummarycreatedon
+        sql: "{CUBE}.\"DeliverySummaryCreatedOn\""
+        type: time
+
+      - name: updatedon
+        sql: "{CUBE}.\"UpdatedOn\""
+        type: time
+
+      - name: invoicedate
+        sql: "{CUBE}.\"InvoiceDate\""
+        type: time
+
+      - name: cancelleddate
+        sql: "{CUBE}.\"CancelledDate\""
+        type: time
+
+      - name: uploadedon
+        sql: "{CUBE}.\"UploadedOn\""
+        type: time
+
+      - name: invoicestarttime
+        sql: "{CUBE}.\"InvoiceStartTime\""
+        type: time
+
+      - name: invoiceendtime
+        sql: "{CUBE}.\"InvoiceEndTime\""
+        type: time
+
+      - name: temporycreditupto
+        sql: "{CUBE}.\"TemporyCreditUpTo\""
+        type: time
+
+      - name: timestamp
+        sql: "{CUBE}.\"TimeStamp\""
+        type: time
+
+      - name: paymentduedate
+        sql: "{CUBE}.\"PaymentDueDate\""
+        type: time
+
+      - name: deliveryconfirmdate
+        sql: "{CUBE}.\"DeliveryConfirmDate\""
+        type: time
+
+      - name: deliverydate
+        sql: "{CUBE}.\"DeliveryDate\""
+        type: time
+
+      - name: deliverytime
+        sql: "{CUBE}.\"DeliveryTime\""
+        type: time
+
+      - name: podate
+        sql: "{CUBE}.\"PODate\""
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+      - name: currencyamount
+        sql: "{CUBE}.\"CurrencyAmount\""
+        type: sum
+
+      - name: carriageamount
+        sql: "{CUBE}.\"CarriageAmount\""
+        type: sum
+
+      - name: visitnumber
+        sql: "{CUBE}.\"VisitNumber\""
+        type: sum
+
+      - name: standardcostvalue
+        sql: "{CUBE}.\"StandardCostValue\""
+        type: sum
+
+      - name: averagecostvalue
+        sql: "{CUBE}.\"AverageCostValue\""
+        type: sum
+
+      - name: fifocostvalue
+        sql: "{CUBE}.\"FIFOCostValue\""
+        type: sum
+
+      - name: standardmarginvalue
+        sql: "{CUBE}.\"StandardMarginValue\""
+        type: sum
+
+      - name: averagemarginvalue
+        sql: "{CUBE}.\"AverageMarginValue\""
+        type: sum
+
+      - name: fifomarginvalue
+        sql: "{CUBE}.\"FIFOMarginValue\""
+        type: sum
+
+      - name: totalgoodsvalue
+        sql: "{CUBE}.\"TotalGoodsValue\""
+        type: sum
+
+      - name: totalvatvalue
+        sql: "{CUBE}.\"TotalVATValue\""
+        type: sum
+
+      - name: totalbttvalue
+        sql: "{CUBE}.\"TotalBTTValue\""
+        type: sum
+
+      - name: totalnbtvalue
+        sql: "{CUBE}.\"TotalNBTValue\""
+        type: sum
+
+      - name: totalothertaxvalue
+        sql: "{CUBE}.\"TotalOtherTAXValue\""
+        type: sum
+
+      - name: totalheaderdiscountvalue
+        sql: "{CUBE}.\"TotalHeaderDiscountValue\""
+        type: sum
+
+      - name: totallinediscountvalue
+        sql: "{CUBE}.\"TotalLineDiscountValue\""
+        type: sum
+
+      - name: totalspecialdiscountvalue
+        sql: "{CUBE}.\"TotalSpecialDiscountValue\""
+        type: sum
+
+      - name: totalotherdiscountvalue
+        sql: "{CUBE}.\"TotalOtherDiscountValue\""
+        type: sum
+
+      - name: totalinvoicevalue
+        sql: "{CUBE}.\"TotalInvoiceValue\""
+        type: sum
+
+      - name: totalcommisionvalue
+        sql: "{CUBE}.\"TotalCommisionValue\""
+        type: sum
+
+      - name: commissionvalue
+        sql: "{CUBE}.\"CommissionValue\""
+        type: sum
+
+      - name: pdavisitnumber
+        sql: "{CUBE}.\"PDAVisitNumber\""
+        type: sum
+
+      - name: netvaluediscount
+        sql: "{CUBE}.\"NETValueDiscount\""
+        type: sum
+
+      - name: totalcumulativediscountvalue
+        sql: "{CUBE}.\"TotalCumulativeDiscountValue\""
+        type: sum
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+

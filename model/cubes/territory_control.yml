@@ -1,0 +1,641 @@
+cubes:
+  - name: territory_control
+    sql_table: "\"RD\".\"TerritoryControl\""
+    data_source: default
+
+    joins: []
+
+    dimensions:
+      - name: RecID
+        sql: "{CUBE}.\"RecID\""
+        type: number
+        primary_key: true
+
+      - name: businessunit
+        sql: "{CUBE}.\"BusinessUnit\""
+        type: string
+
+      - name: territorycode
+        sql: "{CUBE}.\"TerritoryCode\""
+        type: string
+
+      - name: distributorcode
+        sql: "{CUBE}.\"DistributorCode\""
+        type: string
+
+      - name: retailercodeprefix
+        sql: "{CUBE}.\"RetailerCodePrefix\""
+        type: string
+
+      - name: currentretailercode
+        sql: "{CUBE}.\"CurrentRetailerCode\""
+        type: string
+
+      - name: dayendflag
+        sql: "{CUBE}.\"DayEndFlag\""
+        type: string
+
+      - name: monthendflag
+        sql: "{CUBE}.\"MonthEndFlag\""
+        type: string
+
+      - name: targetentrytype
+        sql: "{CUBE}.\"TargetEntryType\""
+        type: string
+
+      - name: vatapplyflag
+        sql: "{CUBE}.\"VATApplyFlag\""
+        type: string
+
+      - name: multicurrencyrequired
+        sql: "{CUBE}.\"MultiCurrencyRequired\""
+        type: string
+
+      - name: salesoperationtype
+        sql: "{CUBE}.\"SalesOperationType\""
+        type: string
+
+      - name: paymentmandatoryflag
+        sql: "{CUBE}.\"PaymentMandatoryFlag\""
+        type: string
+
+      - name: grnmatch
+        sql: "{CUBE}.\"GRNMatch\""
+        type: string
+
+      - name: creditlimitvalidation
+        sql: "{CUBE}.\"CreditLimitValidation\""
+        type: string
+
+      - name: headerdiscountactive
+        sql: "{CUBE}.\"HeaderDiscountActive\""
+        type: string
+
+      - name: linediscountactive
+        sql: "{CUBE}.\"LineDiscountActive\""
+        type: string
+
+      - name: specialdiscountactive
+        sql: "{CUBE}.\"SpecialDiscountActive\""
+        type: string
+
+      - name: headerdiscountoverwrite
+        sql: "{CUBE}.\"HeaderDiscountOverWrite\""
+        type: string
+
+      - name: linediscountoverwrite
+        sql: "{CUBE}.\"LineDiscountOverWrite\""
+        type: string
+
+      - name: specialdiscountoverwrite
+        sql: "{CUBE}.\"SpecialDiscountOverWrite\""
+        type: string
+
+      - name: workingdays
+        sql: "{CUBE}.\"WorkingDays\""
+        type: string
+
+      - name: miscellaneousretailer
+        sql: "{CUBE}.\"MiscellaneousRetailer\""
+        type: string
+
+      - name: status
+        sql: "{CUBE}.\"Status\""
+        type: string
+
+      - name: createdby
+        sql: "{CUBE}.\"CreatedBy\""
+        type: string
+
+      - name: updatedby
+        sql: "{CUBE}.\"UpdatedBy\""
+        type: string
+
+      - name: orderstockvalidation
+        sql: "{CUBE}.\"OrderStockValidation\""
+        type: string
+
+      - name: productloadtype
+        sql: "{CUBE}.\"ProductLoadType\""
+        type: string
+
+      - name: lostoderflag
+        sql: "{CUBE}.\"LostOderFlag\""
+        type: string
+
+      - name: returnpricemethod
+        sql: "{CUBE}.\"ReturnPriceMethod\""
+        type: string
+
+      - name: returnpriceedit
+        sql: "{CUBE}.\"ReturnPriceEdit\""
+        type: string
+
+      - name: territorytargetentry
+        sql: "{CUBE}.\"TerritoryTargetEntry\""
+        type: string
+
+      - name: executivetargetentry
+        sql: "{CUBE}.\"ExecutiveTargetEntry\""
+        type: string
+
+      - name: retailertargetentry
+        sql: "{CUBE}.\"RetailerTargetEntry\""
+        type: string
+
+      - name: creditlimitoverride
+        sql: "{CUBE}.\"CreditLimitOverride\""
+        type: string
+
+      - name: allowdecimalpointflag
+        sql: "{CUBE}.\"AllowDecimalPointFlag\""
+        type: string
+
+      - name: batchdisplayflag
+        sql: "{CUBE}.\"BatchDisplayFlag\""
+        type: string
+
+      - name: territoryinvoice
+        sql: "{CUBE}.\"TerritoryInvoice\""
+        type: string
+
+      - name: purchaseordernotype
+        sql: "{CUBE}.\"PurchaseOrderNoType\""
+        type: string
+
+      - name: purchaseinvoicenotype
+        sql: "{CUBE}.\"PurchaseInvoiceNoType\""
+        type: string
+
+      - name: grnnotype
+        sql: "{CUBE}.\"GRNNoType\""
+        type: string
+
+      - name: batchserialoutmethod
+        sql: "{CUBE}.\"BatchSerialOUTMethod\""
+        type: string
+
+      - name: sugpoqtycalmethod
+        sql: "{CUBE}.\"SugPOQtyCalMethod\""
+        type: string
+
+      - name: sugpominqtyformulacode
+        sql: "{CUBE}.\"SugPOMinQtyFormulaCode\""
+        type: string
+
+      - name: sugposugqtyformulacode
+        sql: "{CUBE}.\"SugPOSugQtyFormulaCode\""
+        type: string
+
+      - name: mrppricelist
+        sql: "{CUBE}.\"MRPPriceList\""
+        type: string
+
+      - name: tradeschemegroup
+        sql: "{CUBE}.\"TradeSchemeGroup\""
+        type: string
+
+      - name: pricegroup
+        sql: "{CUBE}.\"PriceGroup\""
+        type: string
+
+      - name: defwarehousecode
+        sql: "{CUBE}.\"DefWarehouseCode\""
+        type: string
+
+      - name: headofficeterritory
+        sql: "{CUBE}.\"HeadOfficeTerritory\""
+        type: string
+
+      - name: stockterritory
+        sql: "{CUBE}.\"StockTerritory\""
+        type: string
+
+      - name: retailerprifixdetail
+        sql: "{CUBE}.\"RetailerPrifixDetail\""
+        type: string
+
+      - name: autoretailerfillvalue
+        sql: "{CUBE}.\"AutoRetailerFillValue\""
+        type: string
+
+      - name: cancelinvoicevalidation
+        sql: "{CUBE}.\"CancelInvoiceValidation\""
+        type: string
+
+      - name: allowdeliverydatechange
+        sql: "{CUBE}.\"AllowDeliveryDateChange\""
+        type: string
+
+      - name: changereplacementqty
+        sql: "{CUBE}.\"ChangeReplacementQty\""
+        type: string
+
+      - name: discountmatch
+        sql: "{CUBE}.\"DiscountMatch\""
+        type: string
+
+      - name: pdaorderuploadvalidation
+        sql: "{CUBE}.\"PDAOrderUploadValidation\""
+        type: string
+
+      - name: batchreallocatemethod
+        sql: "{CUBE}.\"BatchReAllocateMethod\""
+        type: string
+
+      - name: cancelinvoicebeforedeliveryconfirm
+        sql: "{CUBE}.\"CancelInvoiceBeforeDeliveryConfirm\""
+        type: string
+
+      - name: allowsalesrestrictdayforeverymonth
+        sql: "{CUBE}.\"AllowSalesRestrictDayForEveryMonth\""
+        type: string
+
+      - name: salesrestrictremoveauthorization
+        sql: "{CUBE}.\"SalesRestrictRemoveAuthorization\""
+        type: string
+
+      - name: purtnprefix
+        sql: "{CUBE}.\"PuRtnPrefix\""
+        type: string
+
+      - name: executiveproductattachvalidation
+        sql: "{CUBE}.\"ExecutiveProductAttachValidation\""
+        type: string
+
+      - name: customerblockingonquotation
+        sql: "{CUBE}.\"CustomerBlockingOnQuotation\""
+        type: string
+
+      - name: quotationstockloadtype
+        sql: "{CUBE}.\"QuotationStockLoadType\""
+        type: string
+
+      - name: quotationstockvalidation
+        sql: "{CUBE}.\"QuotationStockValidation\""
+        type: string
+
+      - name: warehousestock
+        sql: "{CUBE}.\"WareHouseStock\""
+        type: string
+
+      - name: customerblockingoninvoice
+        sql: "{CUBE}.\"CustomerBlockingOnInvoice\""
+        type: string
+
+      - name: addlinefreeissue
+        sql: "{CUBE}.\"AddLineFreeIssue\""
+        type: string
+
+      - name: locationtransferprefix
+        sql: "{CUBE}.\"LocationTransferPrefix\""
+        type: string
+
+      - name: paymentplan
+        sql: "{CUBE}.\"PaymentPlan\""
+        type: string
+
+      - name: receiptprefix
+        sql: "{CUBE}.\"ReceiptPrefix\""
+        type: string
+
+      - name: changepodate
+        sql: "{CUBE}.\"ChangePODate\""
+        type: string
+
+      - name: focsalescategorycode
+        sql: "{CUBE}.\"FOCSalesCategoryCode\""
+        type: string
+
+      - name: territoryprice
+        sql: "{CUBE}.\"TerritoryPrice\""
+        type: string
+
+      - name: defaultstockrequistioncategory
+        sql: "{CUBE}.\"DefaultStockRequistionCategory\""
+        type: string
+
+      - name: stockreorderlevelalert
+        sql: "{CUBE}.\"StockReorderLevelAlert\""
+        type: string
+
+      - name: defpurchasecategorycode
+        sql: "{CUBE}.\"DefPurchaseCategoryCode\""
+        type: string
+
+      - name: poauthorizationemailgroup
+        sql: "{CUBE}.\"POAuthorizationEMailGroup\""
+        type: string
+
+      - name: validateretailerpaymentmethod
+        sql: "{CUBE}.\"ValidateRetailerPaymentMethod\""
+        type: string
+
+      - name: retailertransfercategorycode
+        sql: "{CUBE}.\"RetailerTransferCategoryCode\""
+        type: string
+
+      - name: targetupdatetype
+        sql: "{CUBE}.\"TargetUpdateType\""
+        type: string
+
+      - name: poproductclassification
+        sql: "{CUBE}.\"POProductClassification\""
+        type: string
+
+      - name: defaultreturnwarehouse
+        sql: "{CUBE}.\"DefaultReturnWarehouse\""
+        type: string
+
+      - name: defaultspecialwarehouse
+        sql: "{CUBE}.\"DefaultSpecialWarehouse\""
+        type: string
+
+      - name: discountbudget
+        sql: "{CUBE}.\"DiscountBudget\""
+        type: string
+
+      - name: posmissue
+        sql: "{CUBE}.\"POSMIssue\""
+        type: string
+
+      - name: trustsalescategorycode
+        sql: "{CUBE}.\"TrustSalesCategoryCode\""
+        type: string
+
+      - name: defsettlementcode
+        sql: "{CUBE}.\"DefSettlementCode\""
+        type: string
+
+      - name: defpaymentmethodcode
+        sql: "{CUBE}.\"DefPaymentMethodCode\""
+        type: string
+
+      - name: defdiscountreasoncode
+        sql: "{CUBE}.\"DefDiscountReasonCode\""
+        type: string
+
+      - name: defvatcode
+        sql: "{CUBE}.\"DefVATCode\""
+        type: string
+
+      - name: defcurrencycode
+        sql: "{CUBE}.\"DefCurrencyCode\""
+        type: string
+
+      - name: pdaavailable
+        sql: "{CUBE}.\"PDAAvailable\""
+        type: string
+
+      - name: setoffnoprefix
+        sql: "{CUBE}.\"SetOffNoPrefix\""
+        type: string
+
+      - name: focusproductgroup
+        sql: "{CUBE}.\"FocusProductGroup\""
+        type: string
+
+      - name: focusproductmandatory
+        sql: "{CUBE}.\"FocusProductMandatory\""
+        type: string
+
+      - name: suggestedloadingformulacode
+        sql: "{CUBE}.\"SuggestedLoadingFormulaCode\""
+        type: string
+
+      - name: visittargetspreadcode
+        sql: "{CUBE}.\"VisitTargetSpreadCode\""
+        type: string
+
+      - name: purchaseuomtype
+        sql: "{CUBE}.\"PurchaseUOMType\""
+        type: string
+
+      - name: pospricechangeflag
+        sql: "{CUBE}.\"POSPriceChangeFlag\""
+        type: string
+
+      - name: chequeallocationdisplay
+        sql: "{CUBE}.\"ChequeAllocationDisplay\""
+        type: string
+
+      - name: posdatechangeflag
+        sql: "{CUBE}.\"POSDateChangeFlag\""
+        type: string
+
+      - name: crndatechangeflag
+        sql: "{CUBE}.\"CRNDateChangeFlag\""
+        type: string
+
+      - name: territorycreditnote
+        sql: "{CUBE}.\"TerritoryCreditNote\""
+        type: string
+
+      - name: creditperiodvalidation
+        sql: "{CUBE}.\"CreditPeriodValidation\""
+        type: string
+
+      - name: creditlimitvalidationfororder
+        sql: "{CUBE}.\"CreditLimitValidationForOrder\""
+        type: string
+
+      - name: creditperiodvalidationfororder
+        sql: "{CUBE}.\"CreditPeriodValidationForOrder\""
+        type: string
+
+      - name: paymenttypebasediscount
+        sql: "{CUBE}.\"PaymentTypeBaseDiscount\""
+        type: string
+
+      - name: poreturnauthorizationlevel
+        sql: "{CUBE}.\"POReturnAuthorizationLevel\""
+        type: string
+
+      - name: poreturnauthorizationerp
+        sql: "{CUBE}.\"POReturnAuthorizationERP\""
+        type: string
+
+      - name: monthendstockvalidation
+        sql: "{CUBE}.\"MonthEndStockValidation\""
+        type: string
+
+      - name: materialrequestprocess
+        sql: "{CUBE}.\"MaterialRequestProcess\""
+        type: string
+
+      - name: cumulativediscounttype
+        sql: "{CUBE}.\"CumulativeDiscountType\""
+        type: string
+
+      - name: allowmultiplegrn
+        sql: "{CUBE}.\"AllowMultipleGRN\""
+        type: string
+
+      - name: itinerarytype
+        sql: "{CUBE}.\"ItineraryType\""
+        type: string
+
+      - name: posperunitpricedisplay
+        sql: "{CUBE}.\"POSPerUnitPriceDisplay\""
+        type: string
+
+      - name: backorderflag
+        sql: "{CUBE}.\"BackOrderFlag\""
+        type: string
+
+      - name: posbottompricevalidation
+        sql: "{CUBE}.\"POSBottomPriceValidation\""
+        type: string
+
+      - name: fiintegration
+        sql: "{CUBE}.\"FIIntegration\""
+        type: string
+
+      - name: rdallowancequalifyformulacode
+        sql: "{CUBE}.\"RDAllowanceQualifyFormulaCode\""
+        type: string
+
+      - name: purchasereturneditflag
+        sql: "{CUBE}.\"PurchaseReturnEditFlag\""
+        type: string
+
+      - name: pureturnfiintegration
+        sql: "{CUBE}.\"PUReturnFIIntegration\""
+        type: string
+
+      - name: overduecashinvvalidateflag
+        sql: "{CUBE}.\"OverdueCashInvValidateFlag\""
+        type: string
+
+      - name: deliveryreturn
+        sql: "{CUBE}.\"DeliveryReturn\""
+        type: string
+
+      - name: capturedayexpense
+        sql: "{CUBE}.\"CaptureDayExpense\""
+        type: string
+
+      - name: focpurchasecategorycode
+        sql: "{CUBE}.\"FOCPurchaseCategoryCode\""
+        type: string
+
+      - name: deliveryrequired
+        sql: "{CUBE}.\"DeliveryRequired\""
+        type: string
+
+      - name: allowdeliverycurdate
+        sql: "{CUBE}.\"AllowDeliveryCurDate\""
+        type: string
+
+      - name: deliveryorderstockvalidation
+        sql: "{CUBE}.\"DeliveryOrderStockValidation\""
+        type: string
+
+      - name: deliveryreturncreditnote
+        sql: "{CUBE}.\"DeliveryReturnCreditNote\""
+        type: string
+
+      - name: ordercaptureclassification
+        sql: "{CUBE}.\"OrderCaptureClassification\""
+        type: string
+
+      - name: tempretailercodeprefix
+        sql: "{CUBE}.\"TempRetailerCodePrefix\""
+        type: string
+
+      - name: tempcurrentretailercode
+        sql: "{CUBE}.\"TempCurrentRetailerCode\""
+        type: string
+
+      - name: tempautoretailerfillvalue
+        sql: "{CUBE}.\"TempAutoRetailerFillValue\""
+        type: string
+
+      - name: tempretailerpaymentmethod
+        sql: "{CUBE}.\"TempRetailerPaymentMethod\""
+        type: string
+
+      - name: temptrialretailer
+        sql: "{CUBE}.\"TempTrialRetailer\""
+        type: string
+
+      - name: makeinvoicewithorderammend
+        sql: "{CUBE}.\"MakeInvoiceWithOrderAmmend\""
+        type: string
+
+      - name: retailercategoryproductblock
+        sql: "{CUBE}.\"RetailerCategoryProductBlock\""
+        type: string
+
+      - name: monthendcreditnotevalidation
+        sql: "{CUBE}.\"MonthEndCreditNoteValidation\""
+        type: string
+
+      - name: allowprintafterdelivery
+        sql: "{CUBE}.\"AllowPrintAfterDelivery\""
+        type: string
+
+      - name: createdon
+        sql: "{CUBE}.\"CreatedOn\""
+        type: time
+
+      - name: updatedon
+        sql: "{CUBE}.\"UpdatedOn\""
+        type: time
+
+      - name: lastdayenddate
+        sql: "{CUBE}.\"LastDayEndDate\""
+        type: time
+
+      - name: lastmonthenddate
+        sql: "{CUBE}.\"LastMonthEndDate\""
+        type: time
+
+      - name: timestamp
+        sql: "{CUBE}.\"TimeStamp\""
+        type: time
+
+      - name: lastfreeissuepodate
+        sql: "{CUBE}.\"LastFreeIssuePODate\""
+        type: time
+
+      - name: specialdiscountactivefrom
+        sql: "{CUBE}.\"SpecialDiscountActiveFrom\""
+        type: time
+
+      - name: specialdiscountactiveto
+        sql: "{CUBE}.\"SpecialDiscountActiveTo\""
+        type: time
+
+      - name: lastcustomercategorizationdate
+        sql: "{CUBE}.\"LastCustomerCategorizationDate\""
+        type: time
+
+    measures:
+      - name: count
+        type: count
+
+      - name: nextgrocyclenumber
+        sql: "{CUBE}.\"NextGROCycleNumber\""
+        type: sum
+
+      - name: nextloadcyclenumber
+        sql: "{CUBE}.\"NextLoadCycleNumber\""
+        type: sum
+
+      - name: nextunloadlistnumber
+        sql: "{CUBE}.\"NextUnloadListNumber\""
+        type: sum
+
+      - name: nextreceiptnumber
+        sql: "{CUBE}.\"NextReceiptNumber\""
+        type: sum
+
+      - name: lastsuggestedordernumber
+        sql: "{CUBE}.\"LastSuggestedOrderNumber\""
+        type: sum
+
+    pre_aggregations:
+      # Pre-aggregation definitions go here.
+      # Learn more in the documentation: https://cube.dev/docs/caching/pre-aggregations/getting-started
+
