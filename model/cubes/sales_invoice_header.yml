@@ -326,6 +326,18 @@ cubes:
         sql: "{CUBE}.\"CreatedOn\""
         type: time
 
+      - name: createdon_year
+        sql: "DATEPART(year, {CUBE}.\"CreatedOn\")"
+        type: number
+
+      - name: createdon_quarter
+        sql: "DATEPART(quarter, {CUBE}.\"CreatedOn\")"
+        type: number
+
+      - name: createdon_month
+        sql: "DATEPART(month, {CUBE}.\"CreatedOn\")"
+        type: number
+
       - name: deliverysummarycreatedon
         sql: "{CUBE}.\"DeliverySummaryCreatedOn\""
         type: time
@@ -429,6 +441,11 @@ cubes:
       - name: totalvatvalue
         sql: "{CUBE}.\"TotalVATValue\""
         type: sum
+        drill_members:
+          - createdon
+          - createdon_year
+          - createdon_quarter
+          - createdon_month
 
       - name: totalbttvalue
         sql: "{CUBE}.\"TotalBTTValue\""
@@ -461,10 +478,20 @@ cubes:
       - name: totalinvoicevalue
         sql: "{CUBE}.\"TotalInvoiceValue\""
         type: sum
+        drill_members:
+          - createdon
+          - createdon_year
+          - createdon_quarter
+          - createdon_month
 
       - name: totalcommisionvalue
         sql: "{CUBE}.\"TotalCommisionValue\""
         type: sum
+        drill_members:
+          - createdon
+          - createdon_year
+          - createdon_quarter
+          - createdon_month
 
       - name: commissionvalue
         sql: "{CUBE}.\"CommissionValue\""
@@ -481,6 +508,11 @@ cubes:
       - name: totalcumulativediscountvalue
         sql: "{CUBE}.\"TotalCumulativeDiscountValue\""
         type: sum
+        drill_members:
+          - createdon
+          - createdon_year
+          - createdon_quarter
+          - createdon_month
 
     pre_aggregations:
       # Pre-aggregation definitions go here.
